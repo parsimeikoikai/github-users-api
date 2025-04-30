@@ -20,7 +20,7 @@ A Node.js + TypeScript REST API that fetches public GitHub users, caches the res
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/github-users-api.git
+git clone https://github.com/parsimeikoikai/github-users-api.git
 cd github-users-api
 ```
 ### 2. Install Dependencies
