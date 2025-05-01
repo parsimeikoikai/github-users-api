@@ -82,15 +82,14 @@ Includes:
 ###  📁 Project Structure
 ```bash
 src/
-├── app.ts              # Main app entry
-├── routes/             # Route definitions
-├── controllers/        # Route handlers
-├── services/           # GitHub API logic
-├── config/             # Redis setup
-├── swagger.ts          # Swagger documentation
-__tests__/
-├── users.test.ts       # Unit tests
-├── users.integration.test.ts  # Integration tests
+├── app.ts                  # Main app entry
+├── routes/                 # Route definitions
+├── controllers/            # Route handlers
+├── services/               # GitHub API logic
+├── config/                 # Redis setup
+├── types/                  # Shared TypeScript interfaces and types
+├── __tests__/              # Unit and integration tests
+├── swagger.ts              # Swagger documentation
 ```
 ###  🧰 Tech Stack
 - Node.js + Express.js

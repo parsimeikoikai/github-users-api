@@ -14,7 +14,9 @@ const mockedAxios = axios.get as jest.Mock;
 const mockedRedis = redis as jest.Mocked<typeof redis>;
 
 beforeEach(async () => {
-  const redisClient = new Redis(process.env.REDIS_URL || "redis://localhost:6379");
+  const redisClient = new Redis(
+    process.env.REDIS_URL || "redis://localhost:6379"
+  );
   await redisClient.del("github_users");
   await redisClient.quit();
   process.env.GITHUB_TOKEN = "test-token";
@@ -51,7 +53,7 @@ describe("GET /api/users", () => {
   });
 
   it("should return 429 if GitHub rate limit is hit repeatedly", async () => {
-    mockedRedis.get.mockResolvedValue(null); 
+    mockedRedis.get.mockResolvedValue(null);
     mockedAxios.mockRejectedValue({ response: { status: 429 } });
 
     const response = await request(server).get("/api/users");

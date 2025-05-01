@@ -12,11 +12,11 @@ const options = {
     },
     servers: [
       {
-        url: 'http://localhost:3000', // change this in production
+        url: 'http://localhost:3000', 
       },
     ],
   },
-  apis: ['./src/routes/*.ts'], // path to your route files with JSDoc comments
+  apis: ['./src/routes/*.ts'],
 };
 
 const swaggerSpec = swaggerJSDoc(options);
